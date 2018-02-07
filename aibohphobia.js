@@ -71,3 +71,30 @@ mutation(["hello", "hey"]);
  this compares the results of the comparisons between my arrays to see if they are all true, if not ALL true,
  then returns FALSE
  **/
+/**
+
+This is the HTML:
+<main class="container">
+	<h1>Aibohphobia &#x1f640;</h1>
+<div class="row">
+	<div class="col-3">
+	<label for="word">Word</label>
+	</div>
+	<div class="col-9">
+	<input class="form-control" type="text" id="word" name="word" onkeyup="isPalindrome(this.value, 0);" />
+	</div>
+	</div>
+	<p>Is palindrome? <span id="outputArea"></span></p>
+</main>
+ /**This is the JavaScript
+ function isPalindrome(word) {
+  let answer = true;
+  for(let i = 0; i < Math.floor(word.length / 2); i++) {
+    if(word[i] !== word[word.length - (i + 1)]) {
+      answer = false;
+      break;
+    }
+  }
+  document.getElementById("outputArea").innerHTML = answer;
+}
+ **/
